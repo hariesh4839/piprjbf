@@ -5,27 +5,21 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'hmaven') {
-                    sh 'mvn clean compile'
-                }
+                echo "hhhphase1"
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'hmaven') {
-                    sh 'mvn test'
-                }
+                echo "hhhphase2"
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'hmaven') {
-                    sh 'mvn deploy'
-                }
+                echo "hhhphase3"
             }
         }
     }
